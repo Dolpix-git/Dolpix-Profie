@@ -1,0 +1,604 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-red: #F21326;
+  --color-blue: #0424D9;
+  --color-lime: #C1F20F;
+  --color-lime-dark: #8DAD00;
+  --color-light-grey: #F2F2F2;
+  --color-dark-grey: #0D0D0D;
+}
+
+nav {
+  z-index: 60; 
+  position: fixed;
+  top: 0;
+  padding: 0px 35px 0;
+  width: 100%; 
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+  transition: top 0.3s;
+  opacity: 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+
+  transform: translateY(-50px);
+
+  animation: fadein 1s forwards;
+  animation-delay: 5s;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  background: none;
+  color: var(--color-light-grey);
+  font-weight: 700;
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  border: none;
+  padding: 0px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+button span {
+  color: var(--color-lime);
+  transition: color 0.3s ease;
+}
+
+button:hover {
+  color: var(--color-lime);
+}
+
+button:hover span {
+  color: var(--color-lime);
+}
+
+.resume {
+  margin-left: 60px;
+  border: 2px solid var(--color-lime); /* Adds a border to the button */
+  border-radius: 5px; /* Makes the border rounded */
+  padding: 10px 25px; /* Adds some padding to the button to give it some room */
+  transition: background-color 0.3s ease; /* Adds transition effect to the background color */
+}
+
+.resume:hover {
+  background-color: var(--color-lime); /* Changes the background color of the button on hover */
+  color: var(--color-dark-grey); /* Changes the text color to black on hover */
+}
+.section{
+  margin-left: 30px;
+}
+.nav-image{
+  margin-left: 25px;
+}
+.nav-left{
+  display: flex;
+  align-items: center;
+}
+.nav-left a:hover .icons {
+  filter: invert(81%) sepia(83%) saturate(3773%) hue-rotate(17deg) brightness(107%) contrast(90%);
+  transform: translateY(-5px);
+}
+
+/* Loading animation --------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+
+#code-animation {
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  overflow: hidden;
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+
+  color: var(--color-lime);
+}
+
+#code-animation:after {
+  content: "|";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+/* Experience --------------------------------------------------*/
+
+.experience{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+.experience-canvas{
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Bottom Left Bar --------------------------------------------------*/
+.image-links {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding-left: 40px;
+  margin-bottom: 0px;
+
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadein 1s forwards;
+  animation-delay: 5s;
+
+  z-index: 100;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+
+.image-links a {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.icons {
+  display: block;
+  width: 30px;
+  transition: 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.image-links a:hover .icons {
+  filter: invert(81%) sepia(83%) saturate(3773%) hue-rotate(17deg) brightness(107%) contrast(90%);
+  transform: translateY(-5px);
+}
+
+
+.bottom-line {
+  display: block;
+  width: 50px;
+}
+
+/* Bottom Right Link --------------------------------------------------*/
+.email-link {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  padding-right: 30px;
+  margin-bottom: 0px;
+  
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadein 1s forwards;
+  animation-delay: 5s;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  z-index: 100;
+}
+
+.email-link a {
+  display: inline-block;
+  transform: rotate(90deg) skew(15deg);
+  transform-origin: center;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--color-light-grey);
+  font-size: 17px; 
+  font-family: 'Fira Code', monospace;
+  letter-spacing: 3px;
+  margin-bottom: 150px;
+  margin-left: 5px;
+  transition: color 0.1s ease-in-out, font-size 0.1s ease-in-out;
+}
+
+.email-link a:hover {
+  color: var(--color-lime);
+  font-size: 15.5px;
+}
+
+/* Main HERO --------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=YourPixelFontNameHere&display=swap');
+
+.hero {
+  position: absolute;
+  top: calc(50vh - 150px);
+  left: 10%;
+  
+
+  width: 80%; /* adjust as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* or left */
+  text-align: left; 
+
+  z-index: 2;
+
+  opacity: 0;
+  animation: fadein 1s forwards;
+  animation-delay: 5s;
+}
+
+.hero .intro {
+  font-family: 'YourPixelFontNameHere', sans-serif;
+  font-size: 20px; 
+  color: var(--color-light-grey);
+  margin-bottom: 5px;
+  font-family: 'Fira Code', monospace;
+}
+
+.hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 80px;
+  color: var(--color-lime);
+  margin-bottom: 5px;
+}
+
+.hero .occupation {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 50px; 
+  color: var(--color-lime-dark);
+  margin-bottom: 10px;
+}
+
+.hero .description {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px; 
+  color: rgb(255, 255, 255);
+
+  margin-top: 20px;
+  font-family: 'Fira Code', monospace;
+
+  max-width: 80%; /* adjust this to control the width of the paragraph */
+  line-height: 1.5; /* adjust this to increase or decrease the space between lines of text */
+}
+
+/* Sections --------------------------------------------------*/
+.new-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* align items to the start, i.e., left */
+  text-align: left;
+  position: relative;
+  z-index: 3; 
+  top: calc(100vh - 50px); 
+  padding: 300px 13%; /* Top/Bottom padding of 100px and Left/Right padding of 20% */
+  color: var(--color-light-grey); 
+
+  /* Adding animation properties */
+  opacity: 0;
+  transform: translateY(20px);
+
+  animation: fadein 1s forwards;
+}
+
+.new-section h2 {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: 'Fira Code', monospace;
+  padding-bottom: 30px; /* Adjust this value as needed */
+}
+
+.new-section .highlight {
+  color: var(--color-lime);
+}
+
+.new-section p {
+  color: var(--color-light-grey);
+  margin-bottom: 20px;
+  line-height: 1.2; /* adjust this value to change the spacing between lines of text */
+  font-size: 17px; /* adjust this value to change the size of the text */
+  font-weight: 500; /* adjust this value to change the thickness of the text, common values are 400 for normal and 700 for bold */
+
+  font-family: 'Fira Code', monospace;
+}
+
+/* ABOUT  --------------------------------------------------*/
+
+.grid-container {
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: auto auto auto; /* adjust this as needed */
+  gap: 10px;
+}
+
+.grid-item {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  text-align: center;
+  padding: 10px;
+  color: var(--color-lime);
+  font-family: 'Fira Code', monospace;
+}
+
+.grid-item img {
+  margin-right: 10px; /* Create some space between the bullet point image and the text */
+  width: 20px; /* adjust the size of the image as needed */
+  height: 20px;
+}
+
+/* FETURED PROJECTS --------------------------------------------------*/
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.project-flip {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.project-info {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+
+  padding: 40px;
+  background-color: #242424;
+  border-radius: 15px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.project-info h3{
+  font-size: 30px;
+  font-weight: 700;
+  font-family: 'Fira Code', monospace;
+  padding-bottom: 30px;
+  color: var(--color-lime); 
+}
+
+.project-video {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  margin-left: -100px; /* Adjust this value to control the amount of overlap */
+  margin-right: -100px; /* Adjust this value to control the amount of overlap */
+  background-color: #242424; /* Dark gray */
+  border-radius: 15px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  overflow: hidden; /* Ensure that the video corners don't exceed the border-radius */
+}
+
+.project-video video {
+  width: 100%;
+  height: auto;
+  z-index: 10;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.project-button {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.project-button-flip {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin-top: 10px;
+  margin-left: 100px;
+}
+
+
+.project-button img {
+  width: 100%;
+  height: 100%;
+}
+
+.project-button-flip img {
+  width: 100%;
+  height: 100%;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+.heading-container {
+  display: flex;
+  align-items: center; /* to align items vertically in the center */
+  justify-content: space-between; /* to add space between the heading and the image */
+}
+
+.heading-container img {
+  margin-left: 20px; /* adjust this value to add more space between the text and the image */
+  margin-top: -30px; /* adjust this value to align the image vertically */
+}
+
+/* ONE DAY CHALLENGE --------------------------------------------------*/
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 90%; /* Adjust to suit your design */
+  margin: auto; /* centers the grid if its width is less than its parent container's width */
+
+  font-family: 'Fira Code', monospace;
+}
+/* If the screen width is 600px or less, set the grid to display only 1 project card per row */
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
+  background: #242424;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease; /* This will animate the color change */
+}
+
+.project-card:hover {
+  background: #d30e5a; /* This will be the new color when you hover over the card. Change it to any color you like. */
+}
+
+.project-links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.project-link {
+  margin-left: 10px;
+}
+
+.project-title {
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.project-languages {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Adjust as needed */
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.language {
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  color: #7e7e7e;
+}
+
+/* Footer --------------------------------------------------*/
+
+.footer {
+  background-color: #0D0D0D;
+  width: 100%;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 3; 
+  top: calc(100vh - 50px); 
+  padding: 100px 13%; /* Top/Bottom padding of 100px and Left/Right padding of 20% */
+  color: var(--color-light-grey); 
+
+  font-family: 'Fira Code', monospace;
+}
+
+.footer .highlight {
+  color: var(--color-lime);
+}
+
+.footer-text {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 20px 0;
+  color: var(--color-light-grey);
+}
+
+.contact-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: var(--color-light-grey);
+  border: 2px solid var(--color-light-grey);
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.button:hover {
+  background: var(--color-light-grey);
+  color: var(--color-dark-grey);
+}
+
+.heading-container-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* adjust this value to change the spacing between the elements */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Scroll bar--------------------------------------------------*/
+/* Total Scrollbar */
+::-webkit-scrollbar {
+  width: 10px; 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #242424; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3b3b3b; 
+  border-radius: 5px; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-lime);
+}
+
+
+@media (max-width: 600px) {
+  .image-links {
+    display: none;
+  }
+}
+
+@keyframes fadein {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOut {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}

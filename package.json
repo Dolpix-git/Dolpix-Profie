@@ -1,0 +1,21 @@
+{
+  "name": "dolpix-portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "events": "^3.3.0",
+    "three": "^0.151.3",
+    "vite": "^4.3.2"
+  },
+  "dependencies": {
+    "noisejs": "^2.1.0",
+    "perlin.js": "^1.0.0",
+    "simplex-noise": "^4.0.1"
+  }
+}

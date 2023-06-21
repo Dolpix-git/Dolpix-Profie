@@ -1,219 +1,310 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Dolpix's Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./Images/RiskLogo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dolpix Profile</title>
+</head>
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Welcome to<br />
-						The showcase</h1>
-						<p>Working to develop games, and push there limits.</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+<div id="loading-screen"
+  style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0c0c0c; z-index: 10000;">
+  <pre id="code-animation"></pre>
+</div>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Programing</a>
-					</header>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Programing Projects</a></li>
-							<li><a href="generic.html">Art Experiments</a></li>
-							<li><a href="elements.html">About Me</a></li>
-						</ul>
-					</nav>
+<body>
+  <nav id="navbar">
+    <div class="nav-left">
+      <img class="nav-image" src="./Images/RiskLogo.png" alt="Image 3" />
+    </div>
 
-				<!-- Main -->
-					<div id="main">
+    <div class="nav-buttons">
+      <button onclick="scrollToElement('#section1')" class="section"><span>01.</span> About</button>
+      <button onclick="scrollToElement('#section2')" class="section"><span>02.</span> Featured</button>
+      <button onclick="scrollToElement('#section3')" class="section"><span>03.</span> One Day Challenge</button>
+      <button onclick="scrollToElement('#section4')" class="section"><span>04.</span> Contact</button>
+      <button class="resume">Resume</button>
+    </div>
+  </nav>
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2>What Have I <br />
-									Worked On?</a></h2>
-									<p>I am a Video games programmer that loves all things games. The video below is a concept game 
-										I am working on that is inspired by the movement shooter genre</p>
-								</header>
-								<video width="1000" height="600" autoplay muted loop>
-									<source src="Videos/Grapple Demo.mp4" type="video/mp4">
-								  Your browser does not support the video tag.
-								  </video>
-							</article>
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<h2><a href="#">Rope Demo<br />
-										Experiment</a></h2>
-									</header>
-									<video width="540" height="300" controls muted loop>
-										<source src="Videos/Rope Demo.mp4" type="video/mp4">
-									  Your browser does not support the video tag.
-									  </video>
-									  <video width="540" height="300" controls muted loop>
-										<source src="Videos/Rope Weight Demo.mp4" type="video/mp4">
-									  Your browser does not support the video tag.
-									  </video>
-									<p>This was testing the concept of a rope system that uses dynamic particles. The points of collision custom generate particles to then act like a particle rope. Pro's include better performance due to less particles but less physically accurate ropes.</p>
-								</article>			
-								<article>
-									<header>
-										<h2><a href="#">IK Rig<br />
-										Experiment</a></h2>
-									</header>
-									<video width="540" height="300" controls muted loop>
-										<source src="Videos/IK Demo.mp4" type="video/mp4">
-									  Your browser does not support the video tag.
-									  </video>
-									  <video width="540" height="300" controls muted loop>
-										<source src="Videos/IK Still Demo.mov" type="video/mp4">
-									  Your browser does not support the video tag.
-									  </video>
-									<p>The goal here was to use default animations to power a IK rig, allowing for me to dynamically change animations in run time.</p>
-								</article>			
-								<article>
-									<header>
-										<h2><a href="#">Voxel<br />
-											World</a></h2>
-									</header>
-									<video width="540" height="300" controls muted loop>
-										<source src="Videos/Voxel Demo.mp4" type="video/mp4">
-									  Your browser does not support the video tag.
-									  </video>
-									  <video width="540" height="300" controls muted loop>
-										<source src="Videos/Voxel Images Demo.mp4" type="video/mp4">
-									  Your browser does not support the video tag.
-									  </video>
-									<p>Experience with compute shaders, drawing triangles, marching cubes, jobs, sparse voxel oct trees. Lots of procedural generation in general.</p>
-								</article>	
-								<article>
-									<header>
-										<h2><a href="#">Multiplayer<br />
-										Demo</a></h2>
-									</header>
-									<video width="540" height="300" controls muted loop>
-										<source src="Videos/Multiplayer Demo.mp4" type="video/mp4">
-									  Your browser does not support the video tag.
-									  </video>
-									  <video width="540" height="300" controls muted loop>
-										<source src="Videos/Multiplayer FootBall Demo.mp4" type="video/mp4">
-									  Your browser does not support the video tag.
-									  </video>
-									<p>Lots of time put into understanding multiplayer, as I love testing with my friends. Learned a lot of skills with client side prediction.</p>
-								</article>		
-								<article>
-									<header>
-										<h2><a href="#">Momentum<br />
-										Experiment</a></h2>
-									</header>
-									<video width="540" height="300" controls muted loop>
-										<source src="Videos/Running Demo.mp4" type="video/mp4">
-									  Your browser does not support the video tag.
-									  </video>
-									<p>Working of the IK rig, this was me experimenting with dynamic acceleration tilting.</p>
-								</article>	
-								<article>
-									<header>
-										<h2><a href="#">Hand In VR<br />
-										Experiment</a></h2>
-									</header>
-									<video width="540" height="300" controls muted loop>
-										<source src="Videos/Hand Demo.mp4" type="video/mp4">
-									  Your browser does not support the video tag.
-									  </video>
-									<p>I play lots of VR, and I always hated not having my hand properly collide with the environment. I worked on creating a small tech demo that used physics to simulate the fingers, resulting in more immersion.</p>
-								</article>	
-								<article>
-									<header>
-										<h2><a href="#">Graph Visualizer<br />
-										</a></h2>
-									</header>
-									<video width="540" height="300" controls muted loop>
-										<source src="Videos/Graph Demo.mp4" type="video/mp4">
-									  Your browser does not support the video tag.
-									  </video>
-									<p>Made to learn compute shaders in unity.</p>
-								</article>	
-								<article>
-									<header>
-										<h2><a href="#">PID Auto Pilot<br />
-										</a></h2>
-									</header>
-									<video width="540" height="300" controls muted loop>
-										<source src="Videos/AutoPilot Demo.mp4" type="video/mp4">
-									  Your browser does not support the video tag.
-									  </video>
-									<p>Was working on a game concept that revolved around gliding. made a physically accurate glider with a PID controller that makes the plane go the way the user looks.</p>
-								</article>	
-							</section>
+  <div class="experience">
+    <canvas class="experience-canvas"></canvas>
+  </div>
 
-						<!-- Footer 
-							<footer>
-								<div class="pagination">
-									<a href="#" class="previous">Prev</a>
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-								</div>
-							</footer>-->
 
-					</div>
+  <div class="image-links">
+    <a href="https://www.youtube.com/" target="_blank">
+      <img src="./Images/YouTubeLogo.png" alt="Image 1" class="icons" />
+    </a>
+    <a href="https://www.linkedin.com/in/dolpix" target="_blank">
+      <img src="./Images/LinkedInLogo.png" alt="Image 2" class="icons" />
+    </a>
+    <a href="https://github.com/Dolpix-git" target="_blank">
+      <img src="./Images/GitHubLogo.png" alt="Image 3" class="icons" />
+    </a>
+    <img src="./Images/BottomLine.png" alt="Bottom Line" class="bottom-line" />
+  </div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<a class="image fit"></a>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>Bury St Edmunds<br />
-								UK Suffolk</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p>+44-7307899614</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p>kieranavelez@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Name</h3>
-								<p>Kieran Velez</a></p>
-							</section>
-						</section>
-					</footer>
+  <div class="email-link">
+    <a href="mailto:kieranavelez@gmail.com">kieranavelez@gmail.com</a>
+    <img src="./Images/BottomLine.png" alt="Bottom Line" class="bottom-line" />
+  </div>
 
-			</div>
+  <div class="hero">
+    <p class="intro">Hi, my name is</p>
+    <h1>Kieran Velez</h1>
+    <p class="occupation">I Program Video Games</p>
+    <p class="description">
+      Fueled by a passion for gaming and storytelling, I thrive on creating<br> immersive multiplayer experiences.
+      I'm currently <br>diving into the thrilling realm of XR, <br>always seeking the 'magic' in player interactions.
+      <br>
+    </p>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  </div>
 
-	</body>
+
+  <div id="section1" class="new-section">
+    <div class="heading-container">
+      <h2><span class="highlight">01.</span> About Me</h2>
+      <img src="./Images/RightLine.png" alt="Line image">
+    </div>
+
+    <div class="project-info">
+      <p>Today, I'm all about creating unique, engaging experiences for players. <br>I've had a blast designing and
+        programming a competitive multiplayer game<br> and diving into game jams, all of which have helped me grow my
+        skills <br>in Unity, plastic SCM, and more.
+        <br><br>
+        Recently, I've also started exploring the uncharted waters of VR, seeing<br> a whole new realm of potential in how
+        we play games.<br> It's an exciting challenge, and I’m learning heaps every day.
+        <br><br>
+        But it's not just about the tech for me. Whether I'm troubleshooting<br> a bug, crafting a new gameplay feature,
+        or collaborating with others, what really <br>drives me is that moment when someone immerses themselves in the
+        game world<br> I've helped create. It's one awesome journey, and I'm excited for what's to come!
+        <br><br>
+        Here are some programs and languages I am familiar with:
+      </p>
+    </div>
+
+
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="./Images/Dot.png" alt="Bullet point">
+        <span>C#</span>
+      </div>
+      <div class="grid-item">
+        <img src="./Images/Dot.png" alt="Bullet point">
+        <span>C++</span>
+      </div>
+      <div class="grid-item">
+        <img src="./Images/Dot.png" alt="Bullet point">
+        <span>JavaScript</span>
+      </div>
+      <div class="grid-item">
+        <img src="./Images/Dot.png" alt="Bullet point">
+        <span>Python</span>
+      </div>
+      <div class="grid-item">
+        <img src="./Images/Dot.png" alt="Bullet point">
+        <span>Unity</span>
+      </div>
+      <div class="grid-item">
+        <img src="./Images/Dot.png" alt="Bullet point">
+        <span>Plastic SCM</span>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="section2" class="new-section">
+    <div class="heading-container">
+      <h2><span class="highlight">02.</span> Featured Projects</h2>
+      <img src="./Images/RightLine.png" alt="Line image">
+    </div>
+
+    <div class="project">
+
+      <div>
+        <div class="project-info">
+          <h3>Project Crystalline</h3>
+          <p>
+            Meet Crystalline, my passion project. <br>
+            It's a competitive multiplayer game that nods to CSGO and Valorant,<br>
+            but with a twist: your arsenal is made up entirely of throwables.<br>
+            Every match brings a fresh challenge with random game modes and maps.<br>
+            Built with a blend of various systems for a seamless gaming experience, <br>
+            Crystalline has been a playground for honing my coding practices and <br>
+            deepening my understanding of multiplayer development.<br>
+            And, it's on its way to Steam.<br>
+            <br>
+            I can't wait for you to dive into the fun!
+          </p>
+        </div>
+
+        <div class="buttons">
+          <a href="https://github.com/Dolpix-git/Project-Crystalline" target="_blank" class="project-button">
+            <img src="./Images/GitHubLogo.png" alt="button image 1">
+          </a>
+        </div>
+      </div>
+
+      <div class="project-video">
+        <video autoplay muted loop src="./Videos/Crystalline.mp4"></video>
+      </div>
+    </div>
+
+    <div class="project-flip">
+
+      <div>
+        <div class="project-info">
+          <h3>Project - 03</h3>
+          <p>
+            Project-03 is an ambitious aerial shooter, momentarily grounded due <br>
+            to its expansive scope. In this game, players defy gravity, using a <br>
+            unique custom rope physics system to swiftly grapple around corners and <br>
+            battle boss-like creatures. The project primarily showcases my ability to <br>
+            create compelling, dynamic movement mechanics. <br>
+            Although it's on hold, I'm excited to revisit and refine this high-potential game. <br>
+            <br>
+            Check out the video for a high-speed glimpse!
+          </p>
+        </div>
+
+        <div class="buttons">
+          <a href="https://github.com/Dolpix-git/Project-03" target="_blank" class="project-button-flip">
+            <img src="./Images/GitHubLogo.png" alt="button image 1">
+          </a>
+        </div>
+      </div>
+
+      <div class="project-video">
+        <video autoplay muted loop src="./Videos/Grapple Demo.mp4"></video>
+      </div>
+    </div>
+
+    <div class="project">
+
+      <div>
+        <div class="project-info">
+          <h3>Car Customizer</h3>
+          <p>
+            In my "Car Customizer" project at Mastered Bootcamp, I created a fun, <br>
+            simple car personalization tool akin to Rocket League. <br>
+            This marked my first foray into using UML diagrams, enhancing my <br>
+            design and planning skills.
+          </p>
+        </div>
+
+        <div class="buttons">
+          <a href="https://github.com/Dolpix-git/Custom-Car-Creator" target="_blank" class="project-button">
+            <img src="./Images/GitHubLogo.png" alt="button image 1">
+          </a>
+        </div>
+      </div>
+
+      <div class="project-video">
+        <video autoplay muted loop src="./Videos/CarDemo.mp4"></video>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div id="section3" class="new-section">
+    <div class="heading-container">
+      <h2><span class="highlight">03.</span> One Day Mastered Challenges</h2>
+      <img src="./Images/RightLine.png" alt="Line image">
+    </div>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <div class="project-links">
+          <a href="https://github.com/Dolpix-git/Hypercasual-Game-livecreatorchallenge-30march2023" target="_blank" class="project-button">
+            <img src="./Images/GitHubLogo.png" alt="button image 1">
+          </a>
+        </div>
+        <h3 class="project-title">DoggoDash</h3>
+        <p class="project-description">A clone of Crossy Road where the one day objective was to create a hypercasual game.</p>
+        <div class="project-languages">
+          <div class="language">Unity</div>
+          <div class="language">C#</div>
+          <div class="language">Hypercasual</div>
+          <!-- Add more as needed -->
+        </div>
+      </div>
+
+
+      <div class="project-card">
+        <div class="project-links">
+          <a href="https://github.com/Dolpix-git/Tetris-Using-PUN" target="_blank" class="project-button">
+            <img src="./Images/GitHubLogo.png" alt="button image 1">
+          </a>
+        </div>
+        <h3 class="project-title">Multiplayer Tetris</h3>
+        <p class="project-description">The goal with this was to learn PUN for unity and make a multiplayer game.</p>
+        <div class="project-languages">
+          <div class="language">Unity</div>
+          <div class="language">C#</div>
+          <div class="language">Multiplayer</div>
+          <div class="language">PUN</div>
+          <!-- Add more as needed -->
+        </div>
+      </div>
+
+
+      <div class="project-card">
+        <div class="project-links">
+          <a href="https://github.com/Dolpix-git/StorePrototype-Creator-Challenge-" target="_blank" class="project-button">
+            <img src="./Images/GitHubLogo.png" alt="button image 1">
+          </a>
+        </div>
+        <h3 class="project-title">Store Prototype</h3>
+        <p class="project-description">An inventory system layed out in a selling game format.</p>
+        <div class="project-languages">
+          <div class="language">Unity</div>
+          <div class="language">C#</div>
+          <div class="language">Scriptable Objects</div>
+          <!-- Add more as needed -->
+        </div>
+      </div>
+
+
+      <div class="project-card">
+        <div class="project-links">
+          <a href="https://github.com/Dolpix-git/BoxClicker9000" target="_blank" class="project-button">
+            <img src="./Images/GitHubLogo.png" alt="button image 1">
+          </a>
+        </div>
+        <h3 class="project-title">BoxClicker 9000</h3>
+        <p class="project-description">The prompt for this day was to create a leaderboard with PlayFab.</p>
+        <div class="project-languages">
+          <div class="language">Unity</div>
+          <div class="language">C#</div>
+          <div class="language">PlayFab</div>
+          <!-- Add more as needed -->
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  
+  <div id="section4" class="footer">
+    <div class="heading-container-footer">
+      <h2><span class="highlight">04.</span> Contact Me!</h2>
+      <p class="footer-text">I would love to hear from you.<br> Whether it's a project, job opportunity,<br> or just a chat - feel free to get in touch!</p>
+      <div class="contact-buttons">
+        <a href="mailto:kieranavelez@gmail.com" target="_blank" class="button">Email</a>
+        <a href="https://www.linkedin.com/in/dolpix" target="_blank" class="button">LinkedIn</a>
+        <a href="https://github.com/Dolpix-git" target="_blank" class="button">Git</a>
+      </div>
+    </div>
+  </div>
+  
+
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
