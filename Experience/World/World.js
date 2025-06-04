@@ -15,11 +15,17 @@ export default class World{
 
         this.AllowUpdate = false;
 
-        this.resources.on("ready", () =>{
+        const onResourcesReady = () => {
             this.Enviroment = new Enviroment();
             this.room = new Room();
             this.AllowUpdate = true;
-        });
+        };
+
+        if (this.resources.loaded === this.resources.queue) {
+            onResourcesReady();
+        } else {
+            this.resources.on("ready", onResourcesReady);
+        }
     }
 
     Resize(){
