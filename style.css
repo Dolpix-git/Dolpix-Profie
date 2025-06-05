@@ -18,6 +18,23 @@ body {
   --color-dark-grey: #0D0D0D;
 }
 
+#progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+  z-index: 100;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0;
+  background: var(--color-lime);
+}
+
 nav {
   z-index: 60; 
   position: fixed;

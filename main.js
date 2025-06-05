@@ -6,6 +6,7 @@ const experience = new Experience(document.querySelector(".experience-canvas"))
 
 let lastScrollTop = 0;
 const navbar = document.getElementById('navbar');
+const progressBar = document.getElementById('progress-bar');
 
 window.addEventListener('scroll', () => {
   const navbar = document.getElementById('navbar');
@@ -158,4 +159,10 @@ const observer = new IntersectionObserver((entries, observer) => {
 sections.forEach(section => {
   section.style.animationPlayState = 'paused';
   observer.observe(section);
+});
+
+window.addEventListener('scroll', () => {
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrolled = (window.scrollY / docHeight) * 100;
+  progressBar.style.width = `${scrolled}%`;
 });
