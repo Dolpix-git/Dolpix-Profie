@@ -3,6 +3,24 @@ import Experience from "./Experience/Experience.js"
 
 const experience = new Experience(document.querySelector(".experience-canvas"))
 
+let assetsReady = false
+let typewriterDone = false
+
+function maybeFinishLoading() {
+  if (assetsReady && typewriterDone) {
+    document.getElementById("loading-screen").style.animation = "fadeOut 1s forwards";
+    setTimeout(() => {
+      const screen = document.getElementById("loading-screen")
+      if (screen) screen.remove()
+    }, 1000)
+  }
+}
+
+experience.resources.on("ready", () => {
+  assetsReady = true
+  maybeFinishLoading()
+})
+
 
 let lastScrollTop = 0;
 const navbar = document.getElementById('navbar');
@@ -126,10 +144,8 @@ const typeWriter = () => {
     }
   } else {
     document.getElementById("code-animation").style.borderRight = "none";
-    document.getElementById("loading-screen").style.animation = "fadeOut 1s forwards";
-    setTimeout(() => {
-      document.getElementById("loading-screen").remove();
-    }, 1000); // The timeout duration should match the animation duration
+    typewriterDone = true;
+    maybeFinishLoading();
   }
 };
 
